@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CertifyDocx.Api/CertifyDocx.Api.csproj" />
+    <Project Path="src/CertifyDocx.Core/CertifyDocx.Core.vbproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CertifyDocx.Core.Tests/CertifyDocx.Core.Tests.vbproj" />
+  </Folder>
+</Solution>

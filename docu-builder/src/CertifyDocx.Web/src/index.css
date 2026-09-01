@@ -1,0 +1,142 @@
+:root {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #1f2933;
+  background: #f7f8fa;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.app-header {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+  border-bottom: 1px solid #d9dee5;
+  margin-bottom: 1.5rem;
+}
+
+.app-header h1 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.app-header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.app-header a {
+  color: #334e68;
+  text-decoration: none;
+}
+
+.app-header a.active {
+  font-weight: 600;
+  color: #1064a8;
+}
+
+h2 {
+  font-size: 1.15rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-weight: 500;
+}
+
+input[type="text"] {
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #c3cad4;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+fieldset {
+  border: 1px solid #d9dee5;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+}
+
+th, td {
+  border: 1px solid #d9dee5;
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+}
+
+.rows-table input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.button {
+  display: inline-block;
+  background: #1064a8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.55rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  align-self: flex-start;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.error {
+  color: #b42318;
+  background: #fdecea;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+}
+
+.warning {
+  color: #93600a;
+  background: #fdf3e0;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+}
+
+.success {
+  color: #067647;
+  background: #e7f6ef;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+}
+
+.hint {
+  color: #52606d;
+  font-size: 0.9rem;
+}
+
+code {
+  background: #e4e7eb;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+}

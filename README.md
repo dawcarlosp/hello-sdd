@@ -1,52 +1,90 @@
-# Hello SDD: Curso de Spec-Driven Development (SDD) desde cero
+# CertifyDocx — Automatización de Certificados
 
-[![Curso de Spec-Driven Development](https://img.youtube.com/vi/5HaOxAAA5qI/maxresdefault.jpg)](https://youtube.com/live/5HaOxAAA5qI)
+> **Generación automática de certificados desde plantillas Word** | Desarrollado con **SDD** (Spec-Driven Development) + IA en 2026
 
-## Curso de [MoureDev](https://moure.dev) sobre **Spec-Driven Development (SDD)**: desarrollar software con agentes de IA partiendo de una especificación acordada, en lugar de improvisar prompts. 
+![Rellenando plantilla](./docu-builder/public/images/rellenandoPlantilla.png)
 
-> **Es indispensable [ver el curso](https://youtube.com/live/5HaOxAAA5qI) para entender el contenido del repositorio.**
+## El problema
 
-Contiene dos cosas: las **plantillas** usadas en el curso (`samples/`) y un **proyecto completo** construido paso a paso con SDD (`habits-cli/`).
+Organizaciones, academias y departamentos de formación emiten cientos de certificados casi idénticos. Editarlos manualmente por persona es **lento, propenso a errores** y no escala.
+
+## La solución
+
+**CertifyDocx** automatiza el proceso en 3 pasos:
+
+1. **Sube** una plantilla Word con variables marcadas (`$$variable$$`)
+2. **Detecta** automáticamente los campos y genera un formulario
+3. **Descarga** el documento rellenado en segundos — sin errores de transcripción
+
+![Subiendo plantilla](./docu-builder/public/images/subirPlantilla.png)
+![Resultado rellenado](./docu-builder/public/images/resultadoRellenarPlantilla.png)
+
+## Cómo funciona
+
+**Backend (VB.NET + SQL Server)**
+- Núcleo de procesamiento sin dependencias externas: analiza `.docx`, detecta variables simples y de tabla
+- API REST que valida, almacena y genera documentos
+
+**Frontend (React)**
+- Interfaz intuitiva para subir plantillas y rellenar formularios
+- Descarga directa del certificado generado
 
 ```
-HelloSDD/
-├── samples/            # Plantillas y material del curso
-│   ├── AGENTS.md       # Plantilla de instrucciones para el agente
-│   ├── spec.md         # Plantilla de especificación (RF en notación EARS)
-│   ├── prompts.md      # Prompt esencial de cada fase del flujo SDD
-│   └── sdd.excalidraw  # Pizarra del curso (guion por bloques y diagramas)
-└── habits-cli/         # Proyecto práctico desarrollado con SDD
+http://localhost:5173/
 ```
 
-## `samples/` — plantillas
+## Metodología: SDD (Spec-Driven Development)
 
-| Archivo | Qué es |
+Este proyecto fue desarrollado siguiendo **Spec-Driven Development**, una metodología que usa agentes de IA guiados por especificaciones claras, no por prompts improvisados.
+
+Cada artefacto del proyecto tiene su origen documentado:
+
+- **Constitución** → Principios innegociables (core sin dependencias, separación de capas, tests obligatorios)
+- **Especificación** → 11 requisitos funcionales claros (RF-1 a RF-11 en notación EARS)
+- **Planificación** → Arquitectura: módulos, modelo de datos, decisiones técnicas
+- **Tareas** → Implementación incremental con tests primero
+- **Validación** → Cada RF cubierto por tests automatizados
+
+**Resultado:** una arquitectura escalable, mantenible y documentada desde cero.
+
+## Stack
+
+| Componente | Tecnología |
 |---|---|
-| `AGENTS.md` | Plantilla del archivo de contexto para el agente: qué es el proyecto, comandos, estilo, reglas y verificación obligatoria al terminar. `CLAUDE.md` puede limitarse a `@AGENTS.md`. |
-| `spec.md` | Plantilla de especificación: contexto, usuarios, historias, requisitos funcionales numerados (RF-x) en notación EARS, casos límite, fuera de alcance, criterios de finalización y dudas abiertas. |
-| `prompts.md` | Tabla con el prompt esencial de cada fase: constitución, spec, clarificación, plan, tareas, implementación, validación y cambio. |
-| `sdd.excalidraw` | Pizarra del curso: el guion por bloques (qué es SDD, vibe coding, tipos de SDD, EARS, flujo de trabajo, práctica…) y diagramas de cómo trabaja un agente. Se abre en [excalidraw.com](https://excalidraw.com). |
+| Backend | VB.NET, SQL Server |
+| Frontend | React, TypeScript, Vite |
+| Testing | Unit tests (VB.NET), E2E manual |
+| Arquitectura | Separación de capas: Web → API → Core + Data |
 
-## `habits-cli/` — el proyecto con SDD
+## Principios de desarrollo
 
-Una CLI en Python (solo biblioteca estándar) para registrar hábitos de estudio y ver la racha de días consecutivos: `habits add`, `habits done` y `habits list`.
+✓ **Núcleo sin dependencias** — VB.NET Core solo usa BCL, recibe bytes y datos, devuelve bytes  
+✓ **Spec antes que código** — Ninguna funcionalidad sin especificación activa  
+✓ **Tests como criterio de "hecho"** — Implementación test-first  
+✓ **Separación de capas** — Web solo habla con API por HTTP  
+✓ **IA guiada por especificaciones** — No improvisación, valor reproducible  
 
-Lo importante no es la app, sino **cómo se construyó**. Cada paso del flujo SDD dejó su artefacto en el repo:
+## Empezar
 
-| Paso | Artefacto |
-|---|---|
-| 1. Constitución | `docs/constitution.md` — 6 principios innegociables del proyecto |
-| Contexto del agente | `AGENTS.md` + `CLAUDE.md` |
-| 2. Especificación | `specs/001-habits-mvp/spec.md` — RF-1 a RF-11 en notación EARS |
-| 3. Clarificación | Revisión de la spec como QA: detecta ambigüedades y huecos antes de planificar |
-| 4. Planificación | `specs/001-habits-mvp/plan.md` — módulos, modelo de datos, algoritmo de racha, contrato CLI y decisiones técnicas |
-| 5. Tareas | `specs/001-habits-mvp/tasks.md` — T1 a T8 con checkboxes y su "Hecho cuando:" |
-| 6. Implementación | `habits/` (core + storage + cli) y `tests/`, una tarea cada vez y tests primero |
-| 7. Validación | Recorrido RF por RF comprobando qué test cubre cada uno |
+```bash
+# Desarrollo local
+cd docu-builder/src/CertifyDocx.Web
+npm install
+npm run dev
+```
 
-Incluye además una **skill** reutilizable, `spec-generator` (`.claude/skills/spec-generator/`), que guía la entrevista de requisitos y genera la spec siguiendo la plantilla. Está enlazada también para opencode en `.opencode/skill/`.
+La app estará disponible en `http://localhost:5173/`
 
-Los prompts exactos de cada paso, y cómo ejecutar la app y sus tests, están en el [README de habits-cli](./habits-cli/README.md).
+## Documentación del proyecto
+
+- [Constitution](./docu-builder/docs/constitution.md) — Principios del proyecto
+- [Especificación MVP](./docu-builder/specs/001-certificados-mvp/spec.md) — Requisitos funcionales (RF-1 a RF-11)
+- [Plan técnico](./docu-builder/specs/001-certificados-mvp/plan.md) — Arquitectura y decisiones
+- [Tareas](./docu-builder/specs/001-certificados-mvp/tasks.md) — Implementación
+
+---
+
+**Fork del curso SDD de [MoureDev](https://moure.dev)** — Adaptado a una temática de negocio real, manteniendo la metodología de desarrollo con IA.
 
 ## El flujo SDD en una línea
 

@@ -1,0 +1,61 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\cpere\\Desktop\\hello-sdd\\docu-builder\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8F7E8B0F-7C44-D5C7-5B49-31DF2F844A15}|src\\CertifyDocx.Api\\CertifyDocx.Api.csproj|c:\\users\\cpere\\desktop\\hello-sdd\\docu-builder\\src\\certifydocx.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F7E8B0F-7C44-D5C7-5B49-31DF2F844A15}|src\\CertifyDocx.Api\\CertifyDocx.Api.csproj|solutionrelative:src\\certifydocx.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1F0445E-C781-B883-D2E7-D0F3A10EBBD6}|tests\\CertifyDocx.Core.Tests\\CertifyDocx.Core.Tests.vbproj|c:\\users\\cpere\\desktop\\hello-sdd\\docu-builder\\tests\\certifydocx.core.tests\\certifydocx.core.tests.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E1F0445E-C781-B883-D2E7-D0F3A10EBBD6}|tests\\CertifyDocx.Core.Tests\\CertifyDocx.Core.Tests.vbproj|solutionrelative:tests\\certifydocx.core.tests\\certifydocx.core.tests.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CertifyDocx.Core.Tests.vbproj",
+              "DocumentMoniker": "C:\\Users\\cpere\\Desktop\\hello-sdd\\docu-builder\\tests\\CertifyDocx.Core.Tests\\CertifyDocx.Core.Tests.vbproj",
+              "RelativeDocumentMoniker": "tests\\CertifyDocx.Core.Tests\\CertifyDocx.Core.Tests.vbproj",
+              "ToolTip": "C:\\Users\\cpere\\Desktop\\hello-sdd\\docu-builder\\tests\\CertifyDocx.Core.Tests\\CertifyDocx.Core.Tests.vbproj",
+              "RelativeToolTip": "tests\\CertifyDocx.Core.Tests\\CertifyDocx.Core.Tests.vbproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
+              "WhenOpened": "2026-08-31T18:02:10.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\cpere\\Desktop\\hello-sdd\\docu-builder\\src\\CertifyDocx.Api\\Program.cs",
+              "RelativeDocumentMoniker": "src\\CertifyDocx.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\cpere\\Desktop\\hello-sdd\\docu-builder\\src\\CertifyDocx.Api\\Program.cs",
+              "RelativeToolTip": "src\\CertifyDocx.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T18:01:57.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
